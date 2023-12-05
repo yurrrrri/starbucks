@@ -79,3 +79,20 @@ promotionToggleBtn.addEventListener("click", function () {
     promotionEl.classList.remove("hide");
   }
 });
+
+function random(min, max) {
+  return parseInt(Math.random() * (max - min) + min);
+}
+
+function floatingObject(selector, delayTime, size) {
+  gsap.to(selector, random(1, 3), {
+    y: size,
+    repeat: -1,
+    yoyo: true,
+    ease: Power1.easeInOut,
+    delay: random(0, delayTime),
+  });
+}
+floatingObject(".youtube .floating1", 1, 15);
+floatingObject(".youtube .floating2", 0, 15);
+floatingObject(".youtube .floating3", 2, 20);
