@@ -95,4 +95,4 @@ function floatingObject(selector, delayTime, size) {
 }
 floatingObject(".youtube .floating1", 1, 15);
 floatingObject(".youtube .floating2", 0, 15);
-floatingObject(".youtube .floating3", 2, 20);
+floatingObject(".season-product .floating3", 2, 20);
