@@ -96,3 +96,13 @@ function floatingObject(selector, delayTime, size) {
 floatingObject(".youtube .floating1", 1, 15);
 floatingObject(".youtube .floating2", 0, 15);
 floatingObject(".season-product .floating3", 2, 20);
+
+const spyEls = document.querySelectorAll("section.scroll-spy");
+spyEls.forEach(function (spyEl) {
+  new ScrollMagic.Scene({
+    triggerElement: spyEl,
+    triggerHook: 0.8,
+  })
+    .setClassToggle(spyEl, "show")
+    .addTo(new ScrollMagic.Controller());
+});
